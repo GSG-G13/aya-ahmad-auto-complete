@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./public/style.css" />
+  <link rel="stylesheet" href="/public/style.css" />
 </head>
 <body>
     <section class="search-section">
-        <div class="container">
+      <form class="form">
+      <div class="search-container">
+        <input type="text" name="search" placeholder="Search books..." class="search-input">
+        <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>      
+        </a>
+      </form>
+    </div>
+        <!-- <div class="container">
           <div>
             <form>
               <input type="text" placeholder="search for a book" />
@@ -22,8 +30,8 @@
           </div>
   
           <div class="results"></div>
-        </div>
+        </div> -->
       </section>
-    
+         
 </body>
 </html>
