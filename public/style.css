@@ -1,63 +1,292 @@
-body{
+* {
     margin: 0;
     padding: 0;
-    background-color: #b2e0df;
-    height: 100vh;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  :root {
+    --bright-yellow: #f9d030;
+    --hot-pink: #94702d;
+    --lime-green: #b8ee30;
+    --light-blue: rgb(15, 16, 15);
+    --primary-color: #000000;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+  *::selection {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-100px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  #spinner {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.search-container{
-    background: #fff;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to top, var(--light-blue), var(--hot-pink));
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  #spinner span {
+    display: block;
+    background-color: var(--bright-yellow);
+    width: 30px;
     height: 30px;
-    border-radius: 30px;
-    padding: 10px 20px;
+    border-radius: 5%;
+    margin: 0 8px;
+    animation: spinner 1s infinite;
+  }
+  
+  #spinner span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  #spinner span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  #spinner span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  #spinner span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  #spinner span:nth-child(5) {
+    animation-delay: 1s;
+  }
+  
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+  }
+  
+  header h1 {
+    color: var(--primary-color);
+  }
+  
+  header ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  header ul li {
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #111;
+  }
+  
+  header ul li:hover {
+    color: var(--primary-color);
+  }
+  
+  header ul li.active {
+    color: var(--primary-color);
+  }
+  
+  main .books-bg {
+    height: 12rem;
+    background-image: url('./images/Group_7.png');
+    background-size: cover;
+    position: relative;
+  }
+  
+  main .books-bg::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.457);
+  }
+  
+
+  
+  .search-section {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  
+  .search-section .container {
+    width: 35%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px #ccc9c9;
+  }
+  
+  .search-section .container>div:nth-child(1) {
+    position: relative;
+  }
+  
+  .search-section .container input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 1rem 4rem 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .search-section .container>div:nth-child(1) i {
+    position: absolute;
+    color: var(--primary-color);
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .search-section .container .results .card {
+    position: relative;
+    border-bottom: solid #b0b0b0 1px;
+  }
+  
+  .search-section .container .results .card:last-child {
+    border: 0;
+  }
+  
+  .search-section .container .results .card:first-child {
+    border-top: solid #b0b0b0 1px;
+  }
+  
+  .container .results .card p {
+    color: #7e7e7e;
+    padding: 1rem 2.1rem;
+    text-transform: capitalize;
+  }
+  
+  .container .results .card button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 12%;
+    background-color: var(--primary-color);
+    color: #eee;
+    outline: 0;
+    border: 0;
     cursor: pointer;
-    transition: 0.8s;
-    /*box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    inset -7px -7px 10px 0px rgba(0,0,0,.1),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-   text-shadow:  0px 0px 6px rgba(255,255,255,.3),
-              -4px -4px 6px rgba(116, 125, 136, .2);
-  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);*/
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
-}
+  }
+  
+  .container .results .card button:hover {
+    width: 20%;
+  }
+  
+  
+  .upmodal {
+    display: none;
+  }
+  
+  .upmodal[show] {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  
 
-.search-container:hover >
- .search-input{
-    width: 400px;
-}
-
-.search-container .search-input{
-    background: transparent;
-    border: none;
-    outline:none;
-    width: 0px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.8s;
-
-}
-
-.search-container .search-btn .fas{
-    color: #5cbdbb;
-}
-
-/* @keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
-} */
-
-/* .search-container:hover{
-  animation: hoverShake 0.15s linear 3;
-} */
+  
+  .upmodal[show] .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 15%;
+    top: 15%;
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  
+  .upmodal[show] .modal #btnClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #eee;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .upmodal[show] .modal-content {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .upmodal[show] .modal-title {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upmodal[show] .modal-author {
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .upmodal[show] .modal-date {
+    text-align: start;
+    margin-top: 20px;
+  }
+  
+  .upmodal[show] .modal-description {
+    color: #000;
+    font-size: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 157.2%;
+  
+    color: #444444;
+  
+  
+  
+  
+  }
+  
+  .upmodal[show] .modal-img {
+    max-width: 600px !important;
+    user-select: none;
+  }
