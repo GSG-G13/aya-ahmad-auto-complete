@@ -11,27 +11,57 @@
   <link rel="stylesheet" href="/public/style.css" />
 </head>
 <body>
-    <section class="search-section">
-      <form class="form">
-      <div class="search-container">
-        <input type="text" name="search" placeholder="Search books..." class="search-input">
-        <a href="#" class="search-btn">
-                <i class="fas fa-search"></i>      
-        </a>
-      </form>
+    <div id="spinner">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+        <!-- Modal  -->
+  <section class="upmodal">
+    <div class="modal">
+      <button id="btnClose"><i style="color: white;" class="fa-solid fa-xmark"></i></button>
+      <img class="modal-img" src="./public/images/notFound.webp" alt="">
+      <div class="modal-content">
+        <h1 class="modal-title">Book Title</h1>
+        <h3 class="modal-author">Book Author</h3>
+        <p class="modal-description"><b>Description:</b> <span></span></p>
+        <div class="modal-date"><b>Date:</b> <span></span></div>
+      </div>
     </div>
-        <!-- <div class="container">
+  </section>
+
+  <header>
+    <div class="logo">
+      <h1>
+        <i class="fa-solid fa-book-open"></i>
+        Bookle
+      </h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="active">home</li>
+        <li>about</li>
+        <li>contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="books-bg"></section>
+   
+      <section class="search-section">
+        <div class="container">
           <div>
             <form>
               <input type="text" placeholder="search for a book" />
-              <i class="#"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
               <button type="submit" style="display: none"></button>
             </form>
           </div>
   
           <div class="results"></div>
-        </div> -->
+        </div>
       </section>
+    </main>
+    <footer></footer>
          
 </body>
 </html>
