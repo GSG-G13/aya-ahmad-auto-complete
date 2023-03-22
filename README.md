@@ -13,6 +13,22 @@ in the src file, you will find the backend components such as: server.js which c
 #How does the app works?
 in simple terms, we have a server that contains data, an api that fetches this data from the srever, a front end app with html, css, and dom js files that will acess the data manipulate it, and display it as explained in the first part. 
 
+#How to istall the app
+Clone this repository:
+Navigate to the project directory: cd restcountries-nodejs
+Install dependencies: npm install
 
+#Technologies
+
+This project was built with:
+HTML, CSS, and JavaScript
+Node.js
+
+
+#Contributing
+If you would like to contribute to this project, feel free to submit a pull request. Make sure to follow the code style and guidelines.
+
+#Developers
+Ahmed Abumughessib & Aya Aljalees
 
 
