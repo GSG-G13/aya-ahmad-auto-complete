@@ -17,7 +17,7 @@ const searchRoute = (req, res) => {
 
     if (err) {
       res.writeHead(500);
-      res.end('<h1> internal server error </h1>');
+      res.end('<h1> server error </h1>');
     } else {
       if (search) {
         for (let key in jsonData) {
