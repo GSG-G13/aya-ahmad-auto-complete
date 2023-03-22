@@ -6,15 +6,20 @@
   }
   
   :root {
-    --second-color: #48a0a8;
-    --hot-orange: #e86c13;
-    --pure-gray: #8d8d8d;
-    --blue: rgb(94, 92, 123);
-    --primary-color: #000000;
+    --second-color: #4d0202;
+    --hot-orange: #6e5252;
+    --pure-gray: #dbdbdb;
+    --blue: rgb(163, 68, 95);
+    --primary-color: #523f3f;
   }
   
   body {
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+   
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
 
@@ -31,7 +36,7 @@
   }
   
   header h1 {
-    color: var(--primary-color);
+    color: #6e5252;
   }
   
   header ul {
@@ -91,6 +96,7 @@
   .search-section .container .results .card {
     position: relative;
     border-bottom: solid #b0b0b0 1px;
+    background: wheat;
   }
   
   .search-section .container .results .card:last-child {
@@ -102,7 +108,7 @@
   }
   
   .container .results .card p {
-    color: #7e7e7e;
+    color: #000;;
     padding: 1rem 2.1rem;
     text-transform: capitalize;
   }
@@ -113,7 +119,7 @@
     top: 0;
     height: 100%;
     width: 12%;
-    background-color: var(--primary-color);
+    background-color: #6e5252;
     color: #eee;
     outline: 0;
     border: 0;
