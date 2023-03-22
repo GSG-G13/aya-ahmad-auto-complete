@@ -6,10 +6,10 @@
   }
   
   :root {
-    --bright-yellow: #f9d030;
-    --hot-pink: #94702d;
-    --lime-green: #b8ee30;
-    --light-blue: rgb(15, 16, 15);
+    --second-color: #48a0a8;
+    --hot-orange: #e86c13;
+    --pure-gray: #8d8d8d;
+    --blue: rgb(94, 92, 123);
     --primary-color: #000000;
   }
   
@@ -23,64 +23,7 @@
     color: white;
   }
   
-  @keyframes spinner {
-    0% {
-      transform: translateY(0);
-    }
-  
-    50% {
-      transform: translateY(-100px);
-    }
-  
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  #spinner {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    right: 0;
-    background-image: linear-gradient(to top, var(--light-blue), var(--hot-pink));
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  #spinner span {
-    display: block;
-    background-color: var(--bright-yellow);
-    width: 30px;
-    height: 30px;
-    border-radius: 5%;
-    margin: 0 8px;
-    animation: spinner 1s infinite;
-  }
-  
-  #spinner span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  
-  #spinner span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  
-  #spinner span:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-  
-  #spinner span:nth-child(4) {
-    animation-delay: 0.6s;
-  }
-  
-  #spinner span:nth-child(5) {
-    animation-delay: 0.8s;
-  }
-  
-  
+
   header {
     display: flex;
     justify-content: space-between;
@@ -110,25 +53,7 @@
   
   header ul li.active {
     color: var(--primary-color);
-  }
-  
-  main .books-bg {
-    height: 12rem;
-    background-image: url('./images/booksss.jpg/');
-    background-size: cover;
-    position: relative;
-  }
-  
-  main .books-bg::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.457);
-  }
-  
-
-  
+  } 
   .search-section {
     display: flex;
     justify-content: center;
@@ -270,23 +195,74 @@
     text-align: start;
     margin-top: 20px;
   }
-  
   .upmodal[show] .modal-description {
     color: #000;
     font-size: 15px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    line-height: 157.2%;
-  
+    line-height: 157.2%; 
     color: #444444;
-  
-  
-  
-  
   }
   
   .upmodal[show] .modal-img {
     max-width: 600px !important;
     user-select: none;
   }
+  @keyframes spinner {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-100px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #spinner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to top, var(--blue), var(--hot-orange));
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  #spinner span {
+    display: block;
+    background-color: var(--second-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 5%;
+    margin: 0 8px;
+    animation: spinner 1s infinite;
+  }
+  
+  #spinner span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  #spinner span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  #spinner span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  #spinner span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  #spinner span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  
