@@ -18,7 +18,7 @@ Clone this repository:
 Navigate to the project directory: cd restcountries-nodejs
 Install dependencies: npm install
 
-#Technologies
+#Technologies.
 
 This project was built with:
 HTML, CSS, and JavaScript
