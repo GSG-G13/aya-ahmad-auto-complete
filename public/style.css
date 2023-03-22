@@ -77,7 +77,7 @@
   }
   
   #spinner span:nth-child(5) {
-    animation-delay: 1s;
+    animation-delay: 0.8s;
   }
   
   
@@ -114,7 +114,7 @@
   
   main .books-bg {
     height: 12rem;
-    background-image: url('./images/Group_7.png');
+    background-image: url('./images/booksss.jpg/');
     background-size: cover;
     position: relative;
   }
