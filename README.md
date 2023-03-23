@@ -32,6 +32,6 @@ Node.js
 If you would like to contribute to this project, feel free to submit a pull request. Make sure to follow the code style and guidelines.
 
 # Developers
- Ahmed Abumughessib & Aya Aljalees
+ Ahmed Abumughessib & Aya Aljalees.
 
 
